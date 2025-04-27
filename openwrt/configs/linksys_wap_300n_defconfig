@@ -1,0 +1,22 @@
+
+# إعدادات جهاز Linksys WAP 300N
+CONFIG_TARGET_ipq40xx=y
+CONFIG_TARGET_ipq40xx_generic=y
+CONFIG_TARGET_ipq40xx_generic_DEVICE_linksys_wap_300n=y
+
+# تحديد المعالج
+CONFIG_SOC_RT6856=y
+
+# تعريف الذاكرة
+CONFIG_MTD_PHYSMAP=y
+CONFIG_MTD_PHYSMAP_SIM=y
+
+# تفعيل الوايرلس
+CONFIG_PACKAGE_wireless-tools=y
+CONFIG_PACKAGE_wpad-basic=y
+CONFIG_PACKAGE_kmod-mac80211=y
+
+# إعدادات الوايرلس 2.4GHz و 5GHz
+CONFIG_PACKAGE_kmod-rt2800-lib=y
+CONFIG_PACKAGE_kmod-rt2800-usb=y
+CONFIG_PACKAGE_kmod-rt2800-pci=y
