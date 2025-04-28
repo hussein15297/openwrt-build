@@ -40,7 +40,7 @@ jobs:
           # إعدادات مباشرة دون واجهة
       - name: Copy defconfig for Linksys WAP 300N
         run: |
-          cp ../configs/linksys_wap_300n_defconfig ./.config
+          cp ../../configs/linksys_wap_300n_defconfig ./.config
           # تأكد من أن التكوين مناسب لجهازك
 
       - name: Configure Country Code and Channels for 2.4GHz SuperChannel
