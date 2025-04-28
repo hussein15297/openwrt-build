@@ -39,7 +39,7 @@ jobs:
           cd openwrt
           # إعدادات مباشرة دون واجهة
           
-          cp.. configs/linksys_wap_300n_defconfig openwrt/.config
+          cp ..configs/linksys_wap_300n_defconfig ./.config
           # تأكد من أن التكوين مناسب لجهازك
 
       - name: Configure Country Code and Channels for 2.4GHz SuperChannel
