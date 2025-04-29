@@ -1,4 +1,4 @@
-name: Build OpenWRT for Linksys WAP 300N
+name: Build OpenWRT for Linksys WAP300N
 
 on:
   push:
@@ -28,15 +28,16 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
-      - name: Copy defconfig for Linksys WAP 300N
+      - name: Copy defconfig for Linksys WAP300N
         run: |
-          cp configs/linksys_wap_300n_defconfig openwrt/.config
+          cd openwrt
+          cp ../configs/linksys_wap_300n_defconfig .config
 
       - name: Prepare Config
         run: |
           cd openwrt
           make defconfig
-          
+
       - name: Build OpenWRT Image
         run: |
           cd openwrt
@@ -47,4 +48,3 @@ jobs:
         with:
           name: openwrt-image
           path: ./openwrt/bin/
-      
